@@ -1,0 +1,564 @@
+/*
+ * The CSS files for flight version 3.0
+ * 
+ * Version 3.0
+ * Author: Winfred Ma
+ * Email: 851936509@qq.com
+ */
+/*************************** Global Setting ***************************/
+body {
+  background: url(./images/cloud_clear_bg.jpg) no-repeat;
+  margin: 0;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.context__body {
+  background: url(./images/background@2x.jpg) no-repeat;
+  margin: 0;
+  width: 100%;
+}
+/*************************** End of Global Setting *********************/
+
+/*************************** Dashboard progress **********************/
+
+/*************************** Header Section ****************************/
+.header__container {
+  background: rgba(23,183,220,0.6);
+  height: 70px;
+  margin-top: 13px;
+}
+
+.user__profile {
+  height: 70px;
+  width: 280px;
+}
+
+.user__avatar {
+  border-radius: 50%;
+  margin-left: 15%;
+  position: relative;
+  top: 10px;
+  width: 70px;
+  z-index: 100;
+}
+
+.profile_info {
+  color: #fff;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.player-name {
+  font-size: 1.8em;
+  font-weight: bold;
+  height: 30px;
+}
+
+.nav__menu {
+  display: inline-block;
+  line-height: 70px;
+  text-align: center;
+  width: 140px;
+}
+
+.head__nav {
+  width: 50%;
+}
+
+.head__nav > ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+.nav__link {
+  color: #fff;
+  display: block;
+  text-align: right;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: #fff;
+}
+
+.nav__menu.active {
+  background: rgba(0,0,0,0.4);
+}
+
+.progress-item > a {
+  background: url(./images/nav_progress.png) no-repeat 20px 26px;
+  padding-right: 15px;
+}
+
+.session-item > a {
+  background: url(./images/nav_sessions.png) no-repeat 20px 26px;
+  padding-right: 30px;
+}
+
+.tips-item > a {
+  background: url(./images/nav_tipsinfo.png) no-repeat 20px 26px;
+  padding-right: 11px;
+}
+
+.game-site {
+  height: 70px;
+}
+
+.game-site > a {
+  background: url(./images/logo_playto.png) no-repeat 25px 0;
+  border-left: 1px solid rgba(225,225,225,0.3);
+  display: block;
+  height: 33px;
+  margin-top: 22px;
+  width: 190px;
+}
+/************************************ End of Header ****************************/
+
+/************************************ Tips Section *****************************/
+.child-progress-container {
+  color: #fff;
+  margin: 0 auto;
+  width: 875px;
+
+}
+
+.context-title {
+  color: #3593b7;
+  margin: 35px 0 20px;
+}
+
+.today__tips {
+  background: #6aad53;
+  border-radius: 5px;
+  height: 45px;
+  overflow: hidden;	
+}
+
+.tips__sub-title {
+  background: url(./images/tips_of_the_day.png) no-repeat 20px 16px;
+}
+
+.tips-label {
+  font-size: 0.8em;
+  margin-left: 45px;
+  margin-top: 16px;
+}
+
+.tips-desc {
+  font-size: 1.2em;
+  line-height: 44px;
+  margin-left: 15px;
+}
+
+.more-tips-btn {
+  background: #74bf5d;
+  border-radius: 15px;
+  height: 25px;
+  line-height: 25px;
+  margin: 10px;
+  text-align: center;
+  width: 100px;
+}
+
+.more-tips-btn > span {
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: bold;
+}
+/************************************** End of Tip Section ******************************/
+
+/************************************** Completed Information ***************************/
+.progress__info {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.completed-info {
+  border-bottom: 1px solid #ddd;
+  height: 152px;
+  text-align: center;
+}
+
+.session__days {
+  background: #fff;
+  border-radius: 4px;
+  color: #979797;
+  height: 210px;
+  padding: 10px;
+  width: 155px;
+}
+
+.played-data {
+  color: #f5a623;
+}
+
+.played-days {
+  font-size: 7em;
+  height: 100px;
+  line-height: 100px;
+}
+
+.played-unit {
+  font-size: 1.3em;
+  margin-top: -10px;
+  padding-left: 17px;
+  text-align: left;
+}
+
+.played-duration-desc {
+  font-size: 0.9em;
+  padding-left: 5px;
+}
+
+.uncompleted-sessions {
+  font-size: 0.8em;
+  padding: 10px 0;
+  text-align: center;
+}
+/********************************* End of Completed Information ***************************/
+
+/*************************************** Player performance  ******************************/
+.player__status {
+  background: #fff;
+  border-radius: 8px;
+  color: #979797;
+  height: 200px;
+  margin-top: 20px;
+  overflow: hidden;
+  width: 155px;
+}
+
+.player-performance-item {
+  height: 35px;
+  margin-top: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.player-memory {
+  background: url(./images/vertical_indicator_orange.png) no-repeat;
+}
+
+.player-focus {
+  background: url(./images/vertical_indicator_green.png) no-repeat;
+}
+
+.player-regulation {
+  background: url(./images/vertical_indicator_blue.png) no-repeat;
+}
+
+.player-effort {
+  background: url(./images/vertical_indicator_purple.png) no-repeat;
+}
+
+.performance-label {
+  font-size: 0.8em;
+  height: 35px;
+  line-height: 35px;
+  margin-left: 10px;
+  padding-left: 30px;
+  width: 90px;
+}
+
+.player-memory .performance-label {
+  background: url(./images/session_memory.png) no-repeat;
+}
+
+.player-focus .performance-label {
+  background: url(./images/session_focus.png) no-repeat 0 5px;
+}
+
+.player-regulation .performance-label {
+  background: url(./images/session_regulation.png) no-repeat 0 5px;
+}
+
+.player-effort .performance-label {
+  background: url(./images/session_effort.png) no-repeat 0 5px;
+}
+
+.performance-value {
+  height: 35px;
+  line-height: 35px;
+  padding-left: 20px;
+  width: 45px;
+}
+
+.performance-increase {
+  background: url(./images/arrow_increase.png) no-repeat 0 10px;
+  color: 4ab2e2;
+}
+
+.performance-decrease {
+  background: url(./images/arrow_decrease.png) no-repeat 0 10px;
+  color: f5a623
+}
+/******************************* End of Player performance  ******************************/
+
+/******************************************* Glow Factor Section ******************************/
+.glow-factor-chart {
+  border-radius: 5px;
+  height: 532px;
+  margin-left: 20px;
+  width: 700px;
+}
+
+.glow-factor-nav {
+  border: 0;
+}
+
+.nav-tab-item {
+  background: rgba(255,255,255,0.5);
+  border-radius: 4px;
+  text-align: center;
+  width: 155px;
+}
+
+.glow-factor-nav a {
+  color: #555;
+}
+.tab-content {
+  background: #fff;
+  border-radius: 8px;
+  height: 389px;
+}
+
+.tab-content .tab-pane {
+  height: 310px;
+}
+
+.glow-factor-chart__title {
+  color: gray;
+  padding: 20px 0 15px;
+  text-align: center;
+}
+
+.glow-factor-share {
+  color: #9b9b9b;
+  margin: 30px 20px 15px 0;
+  text-align: right;
+}
+
+.glow-factor-share > span {
+  padding: 0 10px;
+}
+
+.glow-factor-share .share-item {
+  border-right: 1px solid #ccc;
+}
+/***************************************** End of Glow Factor Section ***************************/
+
+/************************************** Dashboard progress **************************************/
+
+/***************************************** Sessions Page ***************************************/
+
+/***************************************** Sessions Header *************************************/
+.session-context__container {
+  border-left: 4px solid #c9dbb7;
+  margin-left: 73px;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.session-context__item {
+  margin: 0 auto;
+  width: 780px;
+}
+
+.session-container__title {
+  color: #3593b7;
+  font-size: 2em;
+  margin-left: 115px;
+  padding-top: 15px;
+  text-align: left;
+}
+
+.session-container__tips {
+  margin-left: 115px;
+}
+
+.today-session-container {
+  margin-top: 15px;
+}
+
+.session-date__day {
+  border-bottom: 1px solid #ccc;
+}
+
+.session-detail-info {
+  background: #fff;
+  border-radius: 8px;
+  color: #979797;
+  height: 630px;
+  padding: 20px 15px 35px;
+  width: 780px;
+}
+
+.session-date {
+  margin: 20px 10px 10px 10px;
+  width: 95px;
+}
+
+.timeline-tick {
+  background: url(./images/timeline_tick.png) no-repeat 0 10px;
+  height: 37px;
+  left: -15px;
+  position: absolute;
+  width: 27px;
+}
+
+.session-today-date {
+  
+}
+
+.session-date__day {
+  color: #4a4a4a;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+.session-date__all {
+  font-size: 0.7em;
+  text-align: center;
+}
+
+.session-detail-info__header {
+  color: #979797;
+}
+
+.session-detail-info__header .title {
+  background: url(./images/session_playtime.png) no-repeat 0 1px;
+  padding-left: 25px;
+}
+
+.session-detail-info__header .share-item {
+
+  border-right: 1px solid #ccc;
+}
+
+.session-share > span {
+  padding: 0 10px;
+}
+
+.session-detail-info-body {
+  margin-top: 20px;
+}
+
+.session-performance-chart {
+  margin: 0 10px;
+}
+
+.first-performance-chart {
+  margin-left: 15px;
+}
+
+.last-performance-chart {
+  margin-left: 60px;
+}
+
+.session-performance-icon {
+  height: 60px;
+  margin: 0 auto;
+  padding-top: 35px;
+  width: 80px;
+  text-align: center;
+}
+
+.performance-memory {
+  background: url(./images/session_memory.png) no-repeat 27px 5px;
+}
+
+.performance-focus {
+  background: url(./images/session_focus.png) no-repeat 27px 9px;
+}
+
+.performance-regulation {
+  background: url(./images/session_regulation.png) no-repeat 27px 9px;
+}
+
+.performance-effort {
+  background: url(./images/session_effort.png) no-repeat 27px 7px;
+}
+
+.latest-glow-chart {
+  clear: both;
+}
+
+.latest-glow-title {
+  border-bottom: 1px solid #ccc;
+  font-size: 1.8em;
+  padding: 15px 60px 30px 0;
+  text-align: right;
+}
+
+.brain-sensing-title {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.brain-sensing-body {
+  height: 245px;
+  margin: 0 auto;
+  width: 650px;
+}
+
+.session-container {
+  margin-top: 10px;
+}
+
+.session-detail-collapsed {
+  background: #fff;
+  border-radius: 8px;
+  height: 50px;
+  padding: 15px 15px 15px 25px;
+  width: 780px;
+}
+
+.collapse-btn {
+  background: url(./images/session_expand.png) no-repeat;
+  height: 15px;
+  width: 18px;
+}
+
+.session-date-collapsed {
+  margin-top: 0px;
+}
+
+.session-calendar {
+  background: #fff;
+  height: 50px;
+  padding-left: 58px;
+  position: relative;
+}
+
+.time-line {
+  border-left: 4px solid #c9dbb7;
+  height: 8px;
+  margin-left: 15px;
+}
+
+.show-month-icon {
+   background: url(./images/show_monthly.png) no-repeat;
+   height: 34px;
+   width: 34px;
+}
+
+.calendar-container {
+  background: url(./images/calendar_bg_with_arrow.png) no-repeat;
+  height: 300px;
+  left: 35px;
+  position: absolute;
+  top: -285px;
+  width: 331px;
+}

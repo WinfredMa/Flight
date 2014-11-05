@@ -1,0 +1,144 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="css/lib/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src="js/app/entry/common.js"></script>
+    <title>Parent Dashboard V3</title>
+  </head>
+  <body class="js-child-progress">
+    <div class="js-header">
+      <div class="header__container">
+        <div class="user__profile pull-left">
+          <img class="user__avatar pull-left" src="http://s.cn.bing.net/th?id=OJ.x9NhdqIrV2EM5g&w=120&h=120&c=8&rs=1&pid=5.1" />
+          <div class="profile_info pull-left">
+            <div class="player-name">David</div>
+            <div class="player-title">Flight Captain</div>
+          </div>
+        </div>
+        <nav class="head__nav pull-left">
+          <ul>
+            <li class="nav__menu progress-item js-nav-menu active">
+              <a class="nav__link" href="index.html">PROGRESS</a>
+            </li>
+            <li class="nav__menu session-item js-nav-menu">
+              <a class="nav__link" href="session.html">SESSION</a>
+            </li>
+            <li class="nav__menu tips-item js-nav-menu">
+              <a class="nav__link" href="tips.html">TIPS & INFO</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="pull-left game-site">
+          <a href="http://www.gamecloudstudios.com/home" target="_blank"></a>
+        </div>
+      </div>
+    </div>
+    <div class="context__body">
+    <div class="child-progress-container">
+      <div class="overflow-hidden">
+        <h3 class="context-title">David's training summary</h3>
+      </div>
+      <div class="today__tips">
+        <div class="tips__sub-title pull-left">
+          <label class="tips-label">TIPS OF THE DAY:</label>
+        </div>
+        <div class="pull-left">
+          <span class="tips-desc"> have you talked to your child about a "do over" today?</span>
+        </div>
+        <a href="javascript:void();" class="more-tips-btn pull-right">
+          <span>LEARN MORE</span>
+        </a>
+      </div>
+      <div class="progress__info">
+        <div class="left__container pull-left">
+          <div class="session__days js-player-sessions">
+            <div class="completed-info">
+              <div class="played-data">
+                <div class="played-days">
+                  <span class="js-played-days"></span>
+                </div>
+                <div class="played-unit">
+                  days
+                </div>
+              </div>
+              <div class="played-duration-desc">
+                  for the last 4 weeks
+              </div>
+            </div>
+            <div class="uncompleted-sessions">
+              <div>
+                <span class="js-uncompleted-sessions"></span>
+                more sessions need to
+              </div>
+              <div>be completed</div>
+            </div>
+          </div>
+          <div class="player__status js-player-performance">
+            <div class="player-performance-item player-memory">
+              <div class="performance-label pull-left">
+                memory
+              </div>
+              <div class="performance-value performance-increase pull-right js-memory"></div>
+            </div>
+            <div class="player-performance-item player-focus">
+              <div class="performance-label pull-left">
+                focus
+              </div>
+              <div class="performance-value performance-increase pull-right js-focus"></div>
+            </div>
+            <div class="player-performance-item player-regulation">
+              <div class="performance-label pull-left">
+                regulation
+              </div>
+              <div class="performance-value performance-decrease pull-right js-regulation"></div>
+            </div>
+            <div class="player-performance-item player-effort">
+              <div class="performance-label pull-left">
+                effort
+              </div>
+              <div class="performance-value performance-increase pull-right js-effort"></div>
+            </div>
+          </div>
+        </div>
+        <div class="right__container pull-left">
+          <div class="glow-factor-chart">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs glow-factor-nav" role="tablist">
+              <li class="active nav-tab-item">
+                <a href="#last-30s" role="tab" data-toggle="tab">last 30 days</a>
+              </li>
+              <li class="nav-tab-item">
+                <a href="#all-time" role="tab" data-toggle="tab">all time</a>
+              </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="tab-pane active" id="last-30s">
+                <div class="glow-factor-chart__title">
+                  <h4>glow factor over the last 30 days</h4>
+                </div>
+                <div>
+                  <canvas class="js-partial-glow-factor" height="272" width="650"></canvas>
+                </div>
+              </div>
+              <div class="tab-pane" id="all-time">
+                <div class="glow-factor-chart__title">
+                  <h4>glow factor over all days</h4>
+                </div>
+                <div class="js-all-glow-factor">
+                </div>
+              </div>
+              <div class="glow-factor-share">
+                <span class="share-item">SHARE</span>
+                <span>PRINT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <script data-main="js/app/entry/progress" src="js/lib/require.js"></script>
+  </body>
+</html>

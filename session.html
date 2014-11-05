@@ -1,0 +1,254 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="./css/lib/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="./css/main.css" rel="stylesheet" type="text/css">
+    <script src="./js/app/entry/common.js"></script>
+  <title>Parent Dashboard V3</title>
+  </head>
+  <body>
+    <div class="header__container js-header">
+      <div class="user__profile pull-left">
+        <img class="user__avatar pull-left" src="http://s.cn.bing.net/th?id=OJ.x9NhdqIrV2EM5g&w=120&h=120&c=8&rs=1&pid=5.1" />
+        <div class="profile_info pull-left">
+          <div class="player-name">David</div>
+          <div class="player-title">Flight Captain</div>
+        </div>
+      </div>
+      <nav class="head__nav pull-left">
+        <ul>
+          <li class="nav__menu progress-item js-nav-menu">
+            <a class="nav__link" href="index.html">PROGRESS</a>
+          </li>
+          <li class="nav__menu session-item js-nav-menu active">
+            <a class="nav__link" href="session.html">SESSION</a>
+          </li>
+          <li class="nav__menu tips-item js-nav-menu">
+            <a class="nav__link" href="tips.html">TIPS & INFO</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="pull-left game-site">
+        <a href="http://www.gamecloudstudios.com/home" target="_blank"></a>
+      </div>
+    </div>
+    <!-- Context body -->
+    <div class="context__body">
+      <div class="session-context__container js-child-sessions">
+        <div class="session-container__title session-context__item">
+          <div>Good evening Dad!</div>
+          <div>David is doing well today</div>
+        </div>
+        <div class="session-container__tips session-context__item">
+          <div class="today__tips">
+            <div class="tips__sub-title pull-left">
+              <label class="tips-label">TIPS OF THE DAY:</label>
+            </div>
+            <div class="pull-left">
+              <span class="tips-desc"> have you talked to your child about a "do over" today?</span>
+            </div>
+            <a href="javascript:void();" class="more-tips-btn pull-right">
+              <span>LEARN MORE</span>
+            </a>
+          </div>
+        </div>
+        <!-- Latest Session Record -->
+        <div class="today-session-container overflow-hidden">
+          <!-- Time line -->
+          <div class="session-today-date session-date pull-left js-session-timeline-date">
+            <div class="timeline-tick"></div>
+            <div class="session-date__day">today</div>
+            <div class="session-date__all">11:20AM SUN 08/30</div>
+          </div>
+          <!-- Collapsed session container -->
+          <div class="session-detail-collapsed pull-left js-collapsed-detail-container hidden">
+            <label>Show Today</label><a href="javascript:void(0);" class="js-expand-btn collapse-btn pull-right"></a>
+          </div>
+          <!-- Expanded session container -->
+          <div class="session-detail-info pull-left session-context__item js-session-detail-container">
+            <div class="session-detail-info__header overflow-hidden">
+              <div class="title pull-left">
+                session play time today:
+              </div>
+              <div class="session-share pull-right">
+                <span class="share-item">SHARE</span>
+                <span>PRINT</span>
+              </div>
+            </div>
+            <div class="session-detail-info-body overflow-hidden">
+              <div class="session-performance-chart pull-left first-performance-chart">
+                <canvas class="js-latest-child-memory" width="90" height="90"></canvas>
+                <div class="session-performance-icon performance-memory">
+                  <span>memory</span>
+                </div>
+              </div>
+              <div class="session-performance-chart pull-left">
+                <canvas class="js-latest-child-focus" width="90" height="90"></canvas>
+                <div class="session-performance-icon performance-focus">
+                  <span>focus</span>
+                </div>
+              </div>
+              <div class="session-performance-chart pull-left">
+                <canvas class="js-latest-child-regulation" width="90" height="90"></canvas>
+                <div class="session-performance-icon performance-regulation">
+                  <span>regulation</span>
+                </div>
+              </div>
+              <div class="session-performance-chart pull-left">
+                <canvas class="js-latest-child-effort" width="90" height="90"></canvas>
+                <div class="session-performance-icon performance-effort">
+                  <span>effort</span>
+                </div>
+              </div>
+              <div class="session-performance-chart pull-left last-performance-chart">
+                <canvas class="js-latest-child-glow" width="170" height="170"></canvas>
+              </div>
+              <div class="latest-glow-chart">
+                <div class="latest-glow-title">today's glow factor pts</div>
+                <div class="brain-sensing-title">brain sensing meter</div>
+                <div class="brain-sensing-body">
+                  <canvas class="js-brain-sensing-chart" width="650" height="245"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of Latest Session Record -->
+ 
+        <!-- The other session container 2-->
+        <div class="session-container overflow-hidden">
+          <!-- Time line -->
+          <div class="session-date-collapsed session-date pull-left js-session-timeline-date">
+            <div class="timeline-tick"></div>
+            <div class="session-date__day">today</div>
+            <div class="session-date__all">11:20AM SUN 08/30</div>
+          </div>
+          <!-- Collapsed session container -->
+          <div class="session-detail-collapsed pull-left js-collapsed-detail-container">
+            <label>Show Yestoday</label><a href="javascript:void(0);" class="js-expand-btn collapse-btn pull-right"></a>
+          </div>
+          <!-- Expanded session container -->
+          <div class="session-detail-info pull-left session-context__item hidden js-session-detail-container">
+            <div class="session-detail-info__header overflow-hidden">
+              <div class="title pull-left">
+                session play time today:
+              </div>
+              <div class="session-share pull-right">
+                <span class="share-item">SHARE</span>
+                <span>PRINT</span>
+              </div>
+            </div>
+            <div class="session-detail-info-body overflow-hidden">
+              <div class="session-performance-chart pull-left first-performance-chart">
+                <canvas class="js-latest-child-memory" width="90" height="90"></canvas>
+                <div class="session-performance-icon performance-memory">
+                  <span>memory</span>
+                </div>
+              </div>
+              <div class="session-performance-chart pull-left">
+                <canvas class="js-latest-child-focus" width="90" height="90"></canvas>
+                <div class="session-performance-icon performance-focus">
+                  <span>focus</span>
+                </div>
+              </div>
+              <div class="session-performance-chart pull-left">
+                <canvas class="js-latest-child-regulation" width="90" height="90"></canvas>
+                <div class="session-performance-icon performance-regulation">
+                  <span>regulation</span>
+                </div>
+              </div>
+              <div class="session-performance-chart pull-left">
+                <canvas class="js-latest-child-effort" width="90" height="90"></canvas>
+                <div class="session-performance-icon performance-effort">
+                  <span>effort</span>
+                </div>
+              </div>
+              <div class="session-performance-chart pull-left last-performance-chart">
+                <canvas class="js-latest-child-glow" width="170" height="170"></canvas>
+              </div>
+              <div class="latest-glow-chart">
+                <div class="latest-glow-title">today's glow factor pts</div>
+                <div class="brain-sensing-title">brain sensing meter</div>
+                <div class="brain-sensing-body">
+                  <canvas class="js-brain-sensing-chart" width="650" height="245"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      
+      
+
+        <!-- Other session container 7-->
+        <div class="session-container overflow-hidden">
+          <!-- Time line -->
+          <div class="session-date-collapsed session-date pull-left js-session-timeline-date">
+            <div class="timeline-tick"></div>
+            <div class="session-date__day">today</div>
+            <div class="session-date__all">11:20AM SUN 08/30</div>
+          </div>
+          <!-- Collapsed session container -->
+          <div class="session-detail-collapsed pull-left js-collapsed-detail-container">
+            <label>Show Yestoday</label><a href="javascript:void(0);" class="js-expand-btn collapse-btn pull-right"></a>
+          </div>
+          <!-- Expanded session container -->
+          <div class="session-detail-info pull-left session-context__item hidden js-session-detail-container">
+            <div class="session-detail-info__header overflow-hidden">
+              <div class="title pull-left">
+                session play time today:
+              </div>
+              <div class="session-share pull-right">
+                <span class="share-item">SHARE</span>
+                <span>PRINT</span>
+              </div>
+            </div>
+            <div class="session-detail-info-body overflow-hidden">
+              <div class="session-performance-chart pull-left first-performance-chart">
+                <canvas class="js-latest-child-memory" width="90" height="90"></canvas>
+                <div class="session-performance-icon performance-memory">
+                  <span>memory</span>
+                </div>
+              </div>
+              <div class="session-performance-chart pull-left">
+                <canvas class="js-latest-child-focus" width="90" height="90"></canvas>
+                <div class="session-performance-icon performance-focus">
+                  <span>focus</span>
+                </div>
+              </div>
+              <div class="session-performance-chart pull-left">
+                <canvas class="js-latest-child-regulation" width="90" height="90"></canvas>
+                <div class="session-performance-icon performance-regulation">
+                  <span>regulation</span>
+                </div>
+              </div>
+              <div class="session-performance-chart pull-left">
+                <canvas class="js-latest-child-effort" width="90" height="90"></canvas>
+                <div class="session-performance-icon performance-effort">
+                  <span>effort</span>
+                </div>
+              </div>
+              <div class="session-performance-chart pull-left last-performance-chart">
+                <canvas class="js-latest-child-glow" width="170" height="170"></canvas>
+              </div>
+              <div class="latest-glow-chart">
+                <div class="latest-glow-title">today's glow factor pts</div>
+                <div class="brain-sensing-title">brain sensing meter</div>
+                <div class="brain-sensing-body">
+                  <canvas class="js-brain-sensing-chart" width="650" height="245"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- end of collapsed session container 7 -->
+        
+      </div>
+      <div class="session-calendar">
+        <div class="calendar-container"></div>
+        <div class="time-line"></div>
+        <div class="show-month-icon"></div>
+      </div>
+    </div><!-- end of context container -->
+    <script data-main="./js/app/entry/session" src="./js/lib/require.js"></script>
+  </body>
+</html>
