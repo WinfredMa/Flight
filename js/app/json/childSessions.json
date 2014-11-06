@@ -1,366 +1,192 @@
 {
-        "playedDates": [
-            "2014-10-26", 
-            "2014-10-29"
-        ], 
+    "response": {
+        "sessionScoreVo": {
+            "gameSessionId": 2, 
+            "sessionChartVo": {
+                "labels": [
+                    "0", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    "10", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    "20", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    " ", 
+                    "30", 
+                    ""
+                ], 
+                "datasets": [
+                    {
+                        "fillColor": "rgba(122,164,138,0.2)", 
+                        "strokeColor": "rgba(237,164,114,1)", 
+                        "pointColor": "rgba(18,251,5,1)", 
+                        "pointStrokeColor": "rgb(122,164,138)", 
+                        "pointHighlightStroke": "rgba(67,237,217,1)", 
+                        "pointHighlightFill": "rgb(122,164,138)", 
+                        "data": [
+                            35, 
+                            58, 
+                            54, 
+                            32, 
+                            38, 
+                            52, 
+                            59, 
+                            48, 
+                            43, 
+                            53, 
+                            59, 
+                            56, 
+                            59, 
+                            55, 
+                            51, 
+                            52, 
+                            57, 
+                            63, 
+                            59, 
+                            47, 
+                            44, 
+                            37, 
+                            27, 
+                            46, 
+                            27, 
+                            57, 
+                            81, 
+                            53, 
+                            43, 
+                            0, 
+                            0, 
+                            50.45
+                        ], 
+                        "label": null
+                    }
+                ]
+            }, 
+            "focusChartVo": {
+                "data": [
+                    {
+                        "highlight": "#EEF2D2", 
+                        "showCenter": false, 
+                        "value": 0.37, 
+                        "label": null, 
+                        "color": "#EEF2D2"
+                    }, 
+                    {
+                        "highlight": "#61952C", 
+                        "showCenter": true, 
+                        "value": 0.63, 
+                        "label": "Focus", 
+                        "color": "#AAD67D"
+                    }
+                ]
+            }, 
+            "regulationChartVo": {
+                "data": [
+                    {
+                        "highlight": "#D7ECF3", 
+                        "showCenter": false, 
+                        "value": 0.42, 
+                        "label": null, 
+                        "color": "#D7ECF3"
+                    }, 
+                    {
+                        "highlight": "#58B8A1", 
+                        "showCenter": true, 
+                        "value": 0.58, 
+                        "label": "Regulation", 
+                        "color": "#82D9DC"
+                    }
+                ]
+            }, 
+            "memoryChartVo": {
+                "data": [
+                    {
+                        "highlight": "#F4E2BD", 
+                        "showCenter": false, 
+                        "value": 0.07, 
+                        "label": null, 
+                        "color": "#F4E2BD"
+                    }, 
+                    {
+                        "highlight": "#F76B1C", 
+                        "showCenter": true, 
+                        "value": 0.93, 
+                        "label": "Memory", 
+                        "color": "#FAD961"
+                    }
+                ]
+            }, 
+            "effortChartVo": {
+                "data": [
+                    {
+                        "highlight": "#E2D0EA", 
+                        "showCenter": false, 
+                        "value": 9, 
+                        "label": null, 
+                        "color": "#E2D0EA"
+                    }, 
+                    {
+                        "highlight": "#3023AE", 
+                        "showCenter": true, 
+                        "value": 1, 
+                        "label": "Effort", 
+                        "color": "#C86DD7"
+                    }
+                ]
+            }, 
+            "glowChartVo": {
+                "data": [
+                    {
+                        "highlight": "#D7ECF3", 
+                        "showCenter": false, 
+                        "value": 0.28, 
+                        "label": null, 
+                        "color": "#D7ECF3"
+                    }, 
+                    {
+                        "highlight": "#365491", 
+                        "showCenter": true, 
+                        "value": 0.72, 
+                        "label": "Glow", 
+                        "color": "#53A0FD"
+                    }
+                ]
+            }
+        }, 
+        "playedDates": [ ], 
+        "childId": 14439, 
         "sessionInfoVos": [
             {
-                "effortScore": 1, 
-                "memoryScore": 0.93, 
-                "regulationScore": 0.58, 
-                "focusScore": 0.63, 
-                "glowScore": 0.72, 
-                "sessionChartVo": {
-                    "labels": [
-                        "0", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        "10", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        "20", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        "30",
-                        ""
-                    ], 
-                    "datasets": [
-                        {
-                            "fillColor": "rgba(122,164,138,0.2)", 
-                            "strokeColor": "rgba(237,164,114,1)", 
-                            "pointColor": "rgba(18,251,5,1)", 
-                            "pointStrokeColor": "rgb(122,164,138)", 
-                            "pointHighlightStroke": "rgba(67,237,217,1)", 
-                            "pointHighlightFill": "rgb(122,164,138)", 
-                            "data": [
-                                42, 
-                                58, 
-                                54, 
-                                32, 
-                                38, 
-                                52, 
-                                59, 
-                                48, 
-                                43, 
-                                53, 
-                                59, 
-                                56, 
-                                59, 
-                                55, 
-                                51, 
-                                52, 
-                                57, 
-                                63, 
-                                59, 
-                                47, 
-                                44, 
-                                37, 
-                                27, 
-                                46, 
-                                27, 
-                                57, 
-                                81, 
-                                53, 
-                                43, 
-                                56, 
-                                78,
-                                65
-                            ], 
-                            "label": null
-                        }
-                    ]
-                }, 
-                "focusChartVo": {
-                    "data": [
-                        {
-                            "highlight": "#EEF2D2", 
-                            "showCenter": false, 
-                            "value": 0.37, 
-                            "label": null, 
-                            "color": "#EEF2D2"
-                        }, 
-                        {
-                            "highlight": "#61952C", 
-                            "showCenter": true, 
-                            "value": 0.63, 
-                            "label": "Focus", 
-                            "color": "#AAD67D"
-                        }
-                    ]
-                }, 
-                "regulationChartVo": {
-                    "data": [
-                        {
-                            "highlight": "#D7ECF3", 
-                            "showCenter": false, 
-                            "value": 0.42, 
-                            "label": null, 
-                            "color": "#D7ECF3"
-                        }, 
-                        {
-                            "highlight": "#58B8A1", 
-                            "showCenter": true, 
-                            "value": 0.58, 
-                            "label": "Regulation", 
-                            "color": "#82D9DC"
-                        }
-                    ]
-                }, 
-                "memoryChartVo": {
-                    "data": [
-                        {
-                            "highlight": "#F4E2BD", 
-                            "showCenter": false, 
-                            "value": 0.07, 
-                            "label": null, 
-                            "color": "#F4E2BD"
-                        }, 
-                        {
-                            "highlight": "#F76B1C", 
-                            "showCenter": true, 
-                            "value": 0.93, 
-                            "label": "Memory", 
-                            "color": "#FAD961"
-                        }
-                    ]
-                }, 
-                "effortChartVo": {
-                    "data": [
-                        {
-                            "highlight": "#E2D0EA", 
-                            "showCenter": false, 
-                            "value": 0, 
-                            "label": null, 
-                            "color": "#E2D0EA"
-                        }, 
-                        {
-                            "highlight": "#3023AE", 
-                            "showCenter": true, 
-                            "value": 1, 
-                            "label": "Effort", 
-                            "color": "#C86DD7"
-                        }
-                    ]
-                }, 
-                "glowChartVo": {
-                    "data": [
-                        {
-                            "highlight": "#D7ECF3", 
-                            "showCenter": false, 
-                            "value": 0.28, 
-                            "label": null, 
-                            "color": "#D7ECF3"
-                        }, 
-                        {
-                            "highlight": "#365491", 
-                            "showCenter": true, 
-                            "value": 0.72, 
-                            "label": "Glow", 
-                            "color": "#53A0FD"
-                        }
-                    ]
-                }, 
+                "gameSessionId": 2, 
                 "startTime": 1414561454000
             }, 
             {
-                "effortScore": 1, 
-                "memoryScore": 0.82, 
-                "regulationScore": 0.64, 
-                "focusScore": 0.57, 
-                "glowScore": 0.82, 
-                "sessionChartVo": {
-                    "labels": [
-                        "0", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        "10", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        "20", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        " ", 
-                        "30", 
-                        " "
-                    ], 
-                    "datasets": [
-                        {
-                            "fillColor": "rgba(122,164,138,0.2)", 
-                            "strokeColor": "rgba(237,164,114,1)", 
-                            "pointColor": "rgba(18,251,5,1)", 
-                            "pointStrokeColor": "rgb(122,164,138)", 
-                            "pointHighlightStroke": "rgba(67,237,217,1)", 
-                            "pointHighlightFill": "rgb(122,164,138)", 
-                            "data": [
-                                0, 
-                                3, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0, 
-                                0
-                            ], 
-                            "label": null
-                        }
-                    ]
-                }, 
-                "focusChartVo": {
-                    "data": [
-                        {
-                            "highlight": "#EEF2D2", 
-                            "showCenter": false, 
-                            "value": 0.43, 
-                            "label": null, 
-                            "color": "#EEF2D2"
-                        }, 
-                        {
-                            "highlight": "#61952C", 
-                            "showCenter": true, 
-                            "value": 0.57, 
-                            "label": "Focus", 
-                            "color": "#AAD67D"
-                        }
-                    ]
-                }, 
-                "regulationChartVo": {
-                    "data": [
-                        {
-                            "highlight": "#D7ECF3", 
-                            "showCenter": false, 
-                            "value": 0.36, 
-                            "label": null, 
-                            "color": "#D7ECF3"
-                        }, 
-                        {
-                            "highlight": "#58B8A1", 
-                            "showCenter": true, 
-                            "value": 0.64, 
-                            "label": "Regulation", 
-                            "color": "#82D9DC"
-                        }
-                    ]
-                }, 
-                "memoryChartVo": {
-                    "data": [
-                        {
-                            "highlight": "#F4E2BD", 
-                            "showCenter": false, 
-                            "value": 0.18, 
-                            "label": null, 
-                            "color": "#F4E2BD"
-                        }, 
-                        {
-                            "highlight": "#F76B1C", 
-                            "showCenter": true, 
-                            "value": 0.82, 
-                            "label": "Memory", 
-                            "color": "#FAD961"
-                        }
-                    ]
-                }, 
-                "effortChartVo": {
-                    "data": [
-                        {
-                            "highlight": "#E2D0EA", 
-                            "showCenter": false, 
-                            "value": 0, 
-                            "label": null, 
-                            "color": "#E2D0EA"
-                        }, 
-                        {
-                            "highlight": "#3023AE", 
-                            "showCenter": true, 
-                            "value": 1, 
-                            "label": "Effort", 
-                            "color": "#C86DD7"
-                        }
-                    ]
-                }, 
-                "glowChartVo": {
-                    "data": [
-                        {
-                            "highlight": "#D7ECF3", 
-                            "showCenter": false, 
-                            "value": 0.18, 
-                            "label": null, 
-                            "color": "#D7ECF3"
-                        }, 
-                        {
-                            "highlight": "#365491", 
-                            "showCenter": true, 
-                            "value": 0.82, 
-                            "label": "Glow", 
-                            "color": "#53A0FD"
-                        }
-                    ]
-                }, 
+                "gameSessionId": 1, 
                 "startTime": 1414306694000
             }
         ]
-    }
+    }, 
+    "statusCode": 0, 
+    "additionalInfo": null
+}

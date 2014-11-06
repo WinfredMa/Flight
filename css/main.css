@@ -385,10 +385,6 @@ a:focus {
   margin-left: 115px;
 }
 
-.today-session-container {
-  margin-top: 15px;
-}
-
 .session-date__day {
   border-bottom: 1px solid #ccc;
 }
@@ -415,8 +411,13 @@ a:focus {
   width: 27px;
 }
 
-.session-today-date {
-  
+.session-container {
+  display: none;
+  margin-top: 15px;
+}
+
+.latest-session-container {
+  margin-top: 10px;
 }
 
 .session-date__day {
@@ -513,10 +514,6 @@ a:focus {
   width: 650px;
 }
 
-.session-container {
-  margin-top: 10px;
-}
-
 .session-detail-collapsed {
   background: #fff;
   border-radius: 8px;
@@ -550,6 +547,7 @@ a:focus {
 
 .show-month-icon {
    background: url(./images/show_monthly.png) no-repeat;
+   display: block;
    height: 34px;
    width: 34px;
 }
@@ -558,7 +556,53 @@ a:focus {
   background: url(./images/calendar_bg_with_arrow.png) no-repeat;
   height: 300px;
   left: 35px;
+  padding: 15px 15px 55px 15px;
   position: absolute;
   top: -285px;
   width: 331px;
+}
+
+.session-calendar {
+  text-align: center;
+}
+
+.session-calendar-table {
+  color: #979797;
+  margin: 20px auto 0;
+  width: 90%;
+}
+
+.change-date-btn {
+  color: #c4c4c4;
+  width: 20%;
+}
+
+.prev-month-btn {
+  text-align: left;
+}
+
+.next-month-btn {
+  text-align: right;
+}
+
+.current-month {
+  color: #979797;
+  font-weight: bold;
+  width: 60%;
+}
+
+.session-calendar-weeks > th {
+  border-bottom: 1px solid #979797;
+  padding-bottom: 8px;
+  text-align: center;
+  width: 14.2%;
+}
+
+.session-calendar td {
+  text-align: center;
+  height: 30px;
+}
+
+.played-day {
+  background: url(./images/calendar_tick.png) no-repeat 20px 18px;
 }
