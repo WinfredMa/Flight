@@ -179,11 +179,15 @@
         "sessionInfoVos": [
             {
                 "gameSessionId": 2, 
-                "startTime": 1414561454000
+                "startTime": 1415323819270
             }, 
             {
                 "gameSessionId": 1, 
-                "startTime": 1414306694000
+                "startTime": 1415254302000
+            },
+            {
+                "gameSessionId": 1, 
+                "startTime": 1410254302000
             }
         ]
     }, 

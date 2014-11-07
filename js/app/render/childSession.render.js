@@ -1,7 +1,8 @@
 /*
+ * Child session render js file
+ *
  * @version 0.1
  * @author Winfred Ma
- * child progress render js file
  */
 define(['jquery','chart', 'util', 'global/constants'],
   function($, chart, util, constants) {
@@ -72,7 +73,8 @@ define(['jquery','chart', 'util', 'global/constants'],
   }
 
   function _renderSessionPage( response ) {
-    var sessionInfoVos, sessionCount;
+    var sessionInfoVos, sessionCount, $tempSessionContainer;
+    
 
     if (!response || (typeof(response) === 'object')) {
       if (response.statusCode == constants.responseCode.SUCCESS) {
@@ -80,7 +82,11 @@ define(['jquery','chart', 'util', 'global/constants'],
         sessionCount = sessionInfoVos.length;
         if (sessionCount) {
           for(var i = 0; i < sessionCount; i++) {
-            $(el.$sessionInfoContainers[i]).data('id', sessionInfoVos[i].gameSessionId).show();
+            //Assign session id to session container
+            $tempSessionContainer = $(el.$sessionInfoContainers[i]);
+            $tempSessionContainer.data('id', sessionInfoVos[i].gameSessionId).show();
+            //Rend the time line data for container
+            _rendTimeLine($tempSessionContainer, sessionInfoVos[i].startTime); 
           }
           $currentSessionContainer = $(el.$sessionInfoContainers[0]);
           _rendSessionInfo($currentSessionContainer, response.response.sessionScoreVo);
@@ -90,6 +96,85 @@ define(['jquery','chart', 'util', 'global/constants'],
 
     $calendar = new util.Calendar({}, response.response.playedDates);
     el.$calendarContainer.html($calendar.display());
+  }
+
+  function _rendTimeLine( $sessionContainer, sessionStartTime ) {
+    var dateObject, currentYear, currentMonth, currentDay, sessionStartHour, $timeLineDay, timeLineString;
+
+    $timeLineDay = $sessionContainer.find('.js-time-line-day');
+    dateObject = new Date();
+    currentYear = dateObject.getFullYear();
+    currentMonth = dateObject.getMonth();
+    currentDay = dateObject.getDate();
+    dateObject.setTime(sessionStartTime);
+    
+    if ((currentYear == dateObject.getFullYear()) && (currentMonth == dateObject.getMonth())) {
+       //Today
+       if(currentDay == dateObject.getDate()) {
+         
+         $timeLineDay.html('today');
+         sessionStartHour = dateObject.getHours();
+         timeLineString = sessionStartHour + ':' + dateObject.getMinutes();
+
+         if (sessionStartHour < 12) {
+           timeLineString += 'AM '; 
+         } else {
+           timeLineString += 'PM ';
+         }
+         
+         timeLineString += new util.WeekTable().getWeekDay(dateObject.getDay()).substring(0,3).toUpperCase();
+         currentMonth ++;
+
+         if (currentMonth < 10) {
+           timeLineString += ' 0' + currentMonth;
+         } else {
+           timeLineString += ' ' + currentMonth;
+         }
+
+         if (currentDay <10) {
+           timeLineString += '/0' + currentDay;
+         } else {
+           timeLineString += '/' + currentDay;
+         }
+         $timeLineDay.next().html(timeLineString);
+       }
+
+       //Yesterday
+       if (currentDay == (dateObject.getDate() + 1)) {
+         $timeLineDay.html('yesterday');
+         timeLineString = new util.WeekTable().getWeekDay(dateObject.getDay());
+
+         if (currentMonth < 10) {
+           timeLineString += '. 0' + currentMonth;
+         } else {
+           timeLineString += '. ' + currentMonth;
+         }
+
+         if (currentDay <10) {
+           timeLineString += '.0' + currentDay;
+         } else {
+           timeLineString += '.' + currentDay;
+         }
+       }
+    } else {
+       
+       $timeLineDay.html(new util.WeekTable().getWeekDay(dateObject.getDay()));
+       if (currentMonth < 10) {
+           timeLineString = '0' + currentMonth;
+         } else {
+           timeLineString = currentMonth;
+         }
+
+         if (currentDay <10) {
+           timeLineString += '.0' + currentDay;
+         } else {
+           timeLineString += '.' + currentDay;
+         }
+    }
+
+    $timeLineDay.next().html(timeLineString);
+    
+    //
   }
 
   function _rendSessionInfo( $sessionContainer, $sessionInfo) {

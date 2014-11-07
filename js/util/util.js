@@ -141,9 +141,23 @@ define(['jquery', 'chart'],
     }
   }
 
+  function WeekTable() {
+    if ( WeekTable.instance === 'object' ) {
+      return WeekTable.instance
+    }
+    this.weeks = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+    
+    WeekTable.prototype.getWeekDay = function( index, opts ) {
+      return this.weeks[index];
+    }
+
+    WeekTable.instance = this;
+  }
+
   return {
     drawDoughnut: _drawDoughnut,
     drawLine: _drawLine,
-    Calendar: Calendar
+    Calendar: Calendar,
+    WeekTable: WeekTable
   }
 });

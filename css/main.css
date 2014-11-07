@@ -429,7 +429,8 @@ a:focus {
 
 .session-date__all {
   font-size: 0.7em;
-  text-align: center;
+  padding-left: 5px;
+  text-align: left;
 }
 
 .session-detail-info__header {
@@ -470,8 +471,8 @@ a:focus {
   height: 60px;
   margin: 0 auto;
   padding-top: 35px;
-  width: 80px;
   text-align: center;
+  width: 80px;
 }
 
 .performance-memory {
@@ -504,8 +505,8 @@ a:focus {
 .brain-sensing-title {
   font-size: 1.5em;
   text-align: center;
-  margin-top: 10px;
   margin-bottom: 25px;
+  margin-top: 10px;
 }
 
 .brain-sensing-body {
