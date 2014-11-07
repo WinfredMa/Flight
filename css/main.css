@@ -531,6 +531,8 @@ a:focus {
 
 .session-date-collapsed {
   margin-top: 0px;
+  margin-right: 0px;
+  width: 105px;
 }
 
 .session-calendar {
