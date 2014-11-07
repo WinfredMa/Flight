@@ -75,48 +75,56 @@ define(['jquery','chart', 'util', 'global/constants'],
   function _renderSessionPage( response ) {
     var sessionInfoVos, sessionCount, $tempSessionContainer;
     
-
     if (!response || (typeof(response) === 'object')) {
       if (response.statusCode == constants.responseCode.SUCCESS) {
+
         sessionInfoVos = response.response.sessionInfoVos;
         sessionCount = sessionInfoVos.length;
         if (sessionCount) {
           for(var i = 0; i < sessionCount; i++) {
             //Assign session id to session container
             $tempSessionContainer = $(el.$sessionInfoContainers[i]);
-            $tempSessionContainer.data('id', sessionInfoVos[i].gameSessionId).show();
+            $tempSessionContainer.data('id', sessionInfoVos[i].gameSessionId);
             //Rend the time line data for container
             _rendTimeLine($tempSessionContainer, sessionInfoVos[i].startTime); 
           }
           $currentSessionContainer = $(el.$sessionInfoContainers[0]);
-          _rendSessionInfo($currentSessionContainer, response.response.sessionScoreVo);
+          
+          _rendSessionInfo($currentSessionContainer, null);
+          
         }
       }
     }
-
+    
     $calendar = new util.Calendar({}, response.response.playedDates);
     el.$calendarContainer.html($calendar.display());
   }
 
   function _rendTimeLine( $sessionContainer, sessionStartTime ) {
-    var dateObject, currentYear, currentMonth, currentDay, sessionStartHour, $timeLineDay, timeLineString;
+    var dateObject, currentYear, currentMonth, currentDay,
+        playedYear, playedMonth, playedDay, playedHour, playedMins,
+        $timeLineDay, timeLineString, collapsedCantainerTitle;
 
     $timeLineDay = $sessionContainer.find('.js-time-line-day');
+
     dateObject = new Date();
     currentYear = dateObject.getFullYear();
     currentMonth = dateObject.getMonth();
     currentDay = dateObject.getDate();
     dateObject.setTime(sessionStartTime);
-    
-    if ((currentYear == dateObject.getFullYear()) && (currentMonth == dateObject.getMonth())) {
+    playedYear = dateObject.getFullYear();
+    playedMonth = dateObject.getMonth();
+    playedDay = dateObject.getDate();
+    playedMins = dateObject.getMinutes();
        //Today
-       if(currentDay == dateObject.getDate()) {
-         
+       if(currentDay == playedDay) {
+         collapsedCantainerTitle = 'Show Today';
          $timeLineDay.html('today');
-         sessionStartHour = dateObject.getHours();
-         timeLineString = sessionStartHour + ':' + dateObject.getMinutes();
+         playedHour = dateObject.getHours();
+         timeLineString = playedHour + ':' + ((playedMins < 10) ? '0' + playedMins : playedMins);
 
-         if (sessionStartHour < 12) {
+         
+         if (playedHour < 12) {
            timeLineString += 'AM '; 
          } else {
            timeLineString += 'PM ';
@@ -137,53 +145,61 @@ define(['jquery','chart', 'util', 'global/constants'],
            timeLineString += '/' + currentDay;
          }
          $timeLineDay.next().html(timeLineString);
-       }
-
-       //Yesterday
-       if (currentDay == (dateObject.getDate() + 1)) {
+       } else if (currentDay == (playedDay + 1)) {
+         collapsedCantainerTitle = 'Show Yesterday';
          $timeLineDay.html('yesterday');
          timeLineString = new util.WeekTable().getWeekDay(dateObject.getDay());
 
-         if (currentMonth < 10) {
-           timeLineString += '. 0' + currentMonth;
+         if (playedMonth < 10) {
+           timeLineString += '. 0';
          } else {
-           timeLineString += '. ' + currentMonth;
+           timeLineString += '. ';
          }
+         timeLineString +=  playedMonth;
 
          if (currentDay <10) {
-           timeLineString += '.0' + currentDay;
+           timeLineString += '.0'; 
          } else {
-           timeLineString += '.' + currentDay;
+           timeLineString += '.';
          }
-       }
-    } else {
+         timeLineString += playedDay;
+       } else {
        
        $timeLineDay.html(new util.WeekTable().getWeekDay(dateObject.getDay()));
-       if (currentMonth < 10) {
-           timeLineString = '0' + currentMonth;
+       if (playedMonth < 10) {
+           timeLineString = '0';
          } else {
-           timeLineString = currentMonth;
+           timeLineString = '';
+         }
+         timeLineString += playedMonth;
+
+         if (playedDay <10) {
+           timeLineString += '.0';
+         } else {
+           timeLineString += '.';
          }
 
-         if (currentDay <10) {
-           timeLineString += '.0' + currentDay;
-         } else {
-           timeLineString += '.' + currentDay;
-         }
+         timeLineString += playedDay
+         collapsedCantainerTitle = 'Show ' + new util.WeekTable().getCamelCaseWeekDay(dateObject.getDay());
     }
-
+    $sessionContainer.find('.js-collapsed-detail-container label').html(collapsedCantainerTitle);
     $timeLineDay.next().html(timeLineString);
     
     //
   }
 
   function _rendSessionInfo( $sessionContainer, $sessionInfo) {
-    util.drawDoughnut($sessionContainer.find('.js-latest-child-memory')[0], $sessionInfo.memoryChartVo.data);
-    util.drawDoughnut($sessionContainer.find('.js-latest-child-focus')[0], $sessionInfo.focusChartVo.data);
-    util.drawDoughnut($sessionContainer.find('.js-latest-child-regulation')[0], $sessionInfo.regulationChartVo.data);
-    util.drawDoughnut($sessionContainer.find('.js-latest-child-effort')[0], $sessionInfo.effortChartVo.data);
-    util.drawDoughnut($sessionContainer.find('.js-latest-child-glow')[0], $sessionInfo.glowChartVo.data);
-    util.drawLine($sessionContainer.find('.js-brain-sensing-chart')[0], $sessionInfo.sessionChartVo);
+    if ($sessionInfo) {
+      $sessionContainer.find('.js-session-detail-container').removeClass('hidden');
+      $sessionContainer.find('.js-collapsed-detail-container').addClass('hidden');
+      $sessionContainer.find('.js-session-timeline-date').removeClass('session-date-collapsed');
+      util.drawDoughnut($sessionContainer.find('.js-latest-child-memory')[0], $sessionInfo.memoryChartVo.data);
+      util.drawDoughnut($sessionContainer.find('.js-latest-child-focus')[0], $sessionInfo.focusChartVo.data);
+      util.drawDoughnut($sessionContainer.find('.js-latest-child-regulation')[0], $sessionInfo.regulationChartVo.data);
+      util.drawDoughnut($sessionContainer.find('.js-latest-child-effort')[0], $sessionInfo.effortChartVo.data);
+      util.drawDoughnut($sessionContainer.find('.js-latest-child-glow')[0], $sessionInfo.glowChartVo.data);
+      util.drawLine($sessionContainer.find('.js-brain-sensing-chart')[0], $sessionInfo.sessionChartVo);
+    }
   }
 
   function _renderSession( response ) {

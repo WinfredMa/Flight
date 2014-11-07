@@ -3,8 +3,8 @@
  * @author Winfred Ma
  * child progress render js file
  */
-define(['jquery', 'bootstrap', 'chart'],
-  function($, bootstrap, chart) {
+define(['jquery', 'bootstrap', 'chart', 'util'],
+  function($, bootstrap, chart, util) {
   'use strict';
 
   var $view, el, controller;
@@ -57,19 +57,11 @@ define(['jquery', 'bootstrap', 'chart'],
   }
   
   function _renderGlowFactorChart( $child ) {
-    var lineChartData, parasitifer, ctx;
-
-    lineChartData = $child.thirtyDaysChartVo;
+    var parasitifer, ctx, $opts;
     parasitifer = el.$partialGlowFactor[0];
     ctx = parasitifer.getContext("2d");
-    window.myLine = new Chart(ctx).Line(lineChartData,{
-      datasetFill : false,
-      datasetStrokeWidth : 3,
-      showTooltips : false,
-      xLabelType : 1,
-      pointDot : true,
-      responsive : true
-    });
+    $opts = {datasetFill : false, datasetStrokeWidth : 3, showTooltips : false, xLabelType : 1, pointDot : true, responsive : true, scaleShowLabels: false, scaleShowGridLines: false, dashedLine: false};
+    util.drawLine(parasitifer, $child.thirtyDaysChartVo, $opts);
   }
   /**
    * remove form error message

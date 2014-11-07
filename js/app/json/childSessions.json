@@ -142,14 +142,14 @@
                     {
                         "highlight": "#E2D0EA", 
                         "showCenter": false, 
-                        "value": 9, 
+                        "value": 2.5, 
                         "label": null, 
                         "color": "#E2D0EA"
                     }, 
                     {
                         "highlight": "#3023AE", 
                         "showCenter": true, 
-                        "value": 1, 
+                        "value": 7.5, 
                         "label": "Effort", 
                         "color": "#C86DD7"
                     }
@@ -174,20 +174,36 @@
                 ]
             }
         }, 
-        "playedDates": [ ], 
+        "playedDates": [1, 2, 3, 4, 5, 6, 7], 
         "childId": 14439, 
         "sessionInfoVos": [
             {
                 "gameSessionId": 2, 
-                "startTime": 1415323819270
+                "startTime": 1415347298040
             }, 
             {
-                "gameSessionId": 1, 
-                "startTime": 1415254302000
-            },
+                "gameSessionId": 0, 
+                "startTime": 1415207295040
+            }, 
             {
-                "gameSessionId": 1, 
-                "startTime": 1410254302000
+                "gameSessionId": 0, 
+                "startTime": 1415116800000
+            }, 
+            {
+                "gameSessionId": 0, 
+                "startTime": 1415030400000
+            }, 
+            {
+                "gameSessionId": 0, 
+                "startTime": 1414944000000
+            }, 
+            {
+                "gameSessionId": 0, 
+                "startTime": 1414857600000
+            }, 
+            {
+                "gameSessionId": 0, 
+                "startTime": 1414771200000
             }
         ]
     }, 

@@ -17,7 +17,6 @@ define(['global/url', 'http', 'underscore'], function(url, http, _) {
       })
     },
     getDetailSession: function( conditions, callback ) {
-      
       http.getJSON(url.getDetailSessionURL(), conditions).done(function(response) {
         if (_.isFunction(callback)) {
           callback(response);

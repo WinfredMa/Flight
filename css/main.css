@@ -8,6 +8,7 @@
 /*************************** Global Setting ***************************/
 body {
   background: url(./images/cloud_clear_bg.jpg) no-repeat;
+  background-size: cover;
   margin: 0;
 }
 
@@ -393,7 +394,7 @@ a:focus {
   background: #fff;
   border-radius: 8px;
   color: #979797;
-  height: 630px;
+  height: 670px;
   padding: 20px 15px 35px;
   width: 780px;
 }
@@ -412,7 +413,6 @@ a:focus {
 }
 
 .session-container {
-  display: none;
   margin-top: 15px;
 }
 
@@ -456,7 +456,7 @@ a:focus {
 }
 
 .session-performance-chart {
-  margin: 0 10px;
+  margin: 40px 10px 0;
 }
 
 .first-performance-chart {
@@ -465,6 +465,7 @@ a:focus {
 
 .last-performance-chart {
   margin-left: 60px;
+  margin-top: 0;
 }
 
 .session-performance-icon {

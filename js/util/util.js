@@ -151,6 +151,14 @@ define(['jquery', 'chart'],
       return this.weeks[index];
     }
 
+    WeekTable.prototype.getCamelCaseWeekDay = function( index, opts ) {
+      var firstLetter, remainLetters;
+      firstLetter = this.weeks[index].charAt(0).toUpperCase();
+      remainLetters = this.weeks[index].slice(1);
+
+      return firstLetter + remainLetters;
+    }
+
     WeekTable.instance = this;
   }
 
