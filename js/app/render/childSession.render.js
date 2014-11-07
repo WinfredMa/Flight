@@ -7,7 +7,7 @@ define(['jquery','chart', 'util', 'global/constants'],
   function($, chart, util, constants) {
   'use strict';
 
-  var $view, el, controller, $calendar;
+  var $view, el, controller, $calendar, $currentSessionContainer;
 
   function _mapElements() {
     el = {
@@ -25,7 +25,7 @@ define(['jquery','chart', 'util', 'global/constants'],
     el.$expandBtns.on('click', _expandSessionContainer);
     el.$calendarContainer.on('click', '.js-calendar-next-month', _getPlayedDays);
     el.$calendarContainer.on('click', '.js-calendar-prev-month', _getPlayedDays);
-    el.$showCalendarBtn.on('click', _toggleShowCalendar)
+    el.$showCalendarBtn.on('click', _toggleShowCalendar);
   }
 
   function _toggleShowCalendar() {
@@ -33,13 +33,14 @@ define(['jquery','chart', 'util', 'global/constants'],
   }
 
   function _expandSessionContainer () {
-    var $collapsedCantainer, $expandedCantainer;
+    var $collapsedCantainer, $expandedCantainer, $self;
 
+    $self = $(this);
     //Show all of collaped session container
     el.$collapsedSessionContainers.removeClass('hidden');
 
     //Hide the clicked collaped session container
-    $collapsedCantainer = $(this).closest(".session-detail-collapsed");
+    $collapsedCantainer = $self.closest(".session-detail-collapsed");
     $collapsedCantainer.addClass('hidden');
 
     el.$sessionTimeLineDates.addClass('session-date-collapsed');
@@ -47,6 +48,9 @@ define(['jquery','chart', 'util', 'global/constants'],
 
     //Hide session detail container
     el.$sessionDetailCantainers.addClass('hidden');
+    $currentSessionContainer = $self.closest(".session-container");
+    controller.getDetailSession({'sessionId': $currentSessionContainer.data('id'), 'childId': 111});
+
     $collapsedCantainer.next().toggleClass('hidden');
 
   }
@@ -78,8 +82,8 @@ define(['jquery','chart', 'util', 'global/constants'],
           for(var i = 0; i < sessionCount; i++) {
             $(el.$sessionInfoContainers[i]).data('id', sessionInfoVos[i].gameSessionId).show();
           }
-
-          _rendSessionInfo($(el.$sessionInfoContainers[0]), response.response.sessionScoreVo);
+          $currentSessionContainer = $(el.$sessionInfoContainers[0]);
+          _rendSessionInfo($currentSessionContainer, response.response.sessionScoreVo);
         }
       }
     }
@@ -95,6 +99,18 @@ define(['jquery','chart', 'util', 'global/constants'],
     util.drawDoughnut($sessionContainer.find('.js-latest-child-effort')[0], $sessionInfo.effortChartVo.data);
     util.drawDoughnut($sessionContainer.find('.js-latest-child-glow')[0], $sessionInfo.glowChartVo.data);
     util.drawLine($sessionContainer.find('.js-brain-sensing-chart')[0], $sessionInfo.sessionChartVo);
+  }
+
+  function _renderSession( response ) {
+    var $sessionInfoVo;
+
+    if (!response || (typeof(response) === 'object')) {
+      if (response.statusCode == constants.responseCode.SUCCESS) {
+        $sessionInfoVo = response.response;
+
+        _rendSessionInfo($currentSessionContainer, $sessionInfoVo);
+      }
+    }
   }
 
   function _childSession() {
@@ -122,9 +138,11 @@ define(['jquery','chart', 'util', 'global/constants'],
       }
     }
   }
+
   return {
     init: _init,
     renderSessionPage: _renderSessionPage,
-    renderCalendar: _renderCalendar
+    renderCalendar: _renderCalendar,
+    renderSession: _renderSession
   };
 });

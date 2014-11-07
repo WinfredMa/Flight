@@ -23,7 +23,7 @@ define(['render/childSession.render', 'model/childSession.model'],
 
   function _getDetailSession( conditions ) {
     model.getDetailSession(conditions, function(response) {
-      render.renderCalendar(response);
+      render.renderSession(response);
     });
   }
 

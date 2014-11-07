@@ -20,6 +20,7 @@ define([], function () {
           childProgress: 'js/app/json/childProgress.json',
           childSessions: 'js/app/json/childSessions.json',
           childPlayedDays: 'js/app/json/childPlayedDays.json',
+          detailSession: 'js/app/json/detailSession.json',
         }
       };
 

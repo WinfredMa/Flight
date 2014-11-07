@@ -1,6 +1,6 @@
 {
     "response": {
-        "gameSessionId": 2, 
+        "gameSessionId": 1, 
         "sessionChartVo": {
             "labels": [
                 "0", 
@@ -45,35 +45,35 @@
                     "pointHighlightStroke": "rgba(67,237,217,1)", 
                     "pointHighlightFill": "rgb(122,164,138)", 
                     "data": [
-                        35, 
-                        58, 
-                        54, 
-                        32, 
-                        38, 
+                        45, 
+                        48, 
+                        44, 
+                        52, 
+                        68, 
                         52, 
                         59, 
                         48, 
                         43, 
                         53, 
                         59, 
-                        56, 
-                        59, 
+                        36, 
+                        29, 
                         55, 
-                        51, 
+                        31, 
                         52, 
-                        57, 
+                        47, 
                         63, 
                         59, 
                         47, 
                         44, 
-                        37, 
+                        77, 
                         27, 
                         46, 
                         27, 
                         57, 
-                        81, 
+                        71, 
                         53, 
-                        43, 
+                        63, 
                         0, 
                         0, 
                         50.45
@@ -105,14 +105,14 @@
                 {
                     "highlight": "#D7ECF3", 
                     "showCenter": false, 
-                    "value": 0.42, 
+                    "value": 0.12, 
                     "label": null, 
                     "color": "#D7ECF3"
                 }, 
                 {
                     "highlight": "#58B8A1", 
                     "showCenter": true, 
-                    "value": 0.58, 
+                    "value": 0.88, 
                     "label": "Regulation", 
                     "color": "#82D9DC"
                 }
@@ -123,14 +123,14 @@
                 {
                     "highlight": "#F4E2BD", 
                     "showCenter": false, 
-                    "value": 0.07, 
+                    "value": 0.27, 
                     "label": null, 
                     "color": "#F4E2BD"
                 }, 
                 {
                     "highlight": "#F76B1C", 
                     "showCenter": true, 
-                    "value": 0.93, 
+                    "value": 0.73, 
                     "label": "Memory", 
                     "color": "#FAD961"
                 }
@@ -141,14 +141,14 @@
                 {
                     "highlight": "#E2D0EA", 
                     "showCenter": false, 
-                    "value": 9, 
+                    "value": 0.5, 
                     "label": null, 
                     "color": "#E2D0EA"
                 }, 
                 {
                     "highlight": "#3023AE", 
                     "showCenter": true, 
-                    "value": 1, 
+                    "value": 9.5, 
                     "label": "Effort", 
                     "color": "#C86DD7"
                 }
@@ -159,14 +159,14 @@
                 {
                     "highlight": "#D7ECF3", 
                     "showCenter": false, 
-                    "value": 0.28, 
+                    "value": 0.15, 
                     "label": null, 
                     "color": "#D7ECF3"
                 }, 
                 {
                     "highlight": "#365491", 
                     "showCenter": true, 
-                    "value": 0.72, 
+                    "value": 0.85, 
                     "label": "Glow", 
                     "color": "#53A0FD"
                 }
